@@ -16,11 +16,9 @@ end
 %counts the number of occurrences of each rolled value.
 freq = accumarray(sample(:),1)	; 
 
-% sortedFreq is in descending order. Therefore, the first N elements are the N maximum values.
-[sortedFreq,sortedIndices] = sort(x,'descend');
+% we sort freq in descending order, so the first N elements are the N maximum values.
+[~,sortedIndices] = sort(freq,'descend');
 
-
-maxValueIndices = sortingIndices(1:N);
-maxValues = sortedFreq(1:Values);
+maxValues = sortedIndices(1:N);
 
 
